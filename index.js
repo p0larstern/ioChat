@@ -1,7 +1,7 @@
 var express = require('express');
 var socket = require('socket.io');
 
-
+//setting the server at port 3000
 var app = express();
 var server = app.listen(3000,function(){
 	console.log('Port is 3000');
@@ -19,6 +19,6 @@ io.on('connection', function(socket){
 	});
 
 	socket.on('typing',function(data){
-		socket.broadcast.emit('typing', data);
+		socket.broadcast.emit('typing...', data);
 	});
 });
